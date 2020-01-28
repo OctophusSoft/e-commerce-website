@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/header.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header__top">
+			<div class="header__top__number">
+				<img src="assets/images/icons/whatsapp.svg" alt="">	
+				<span>+375 (29) 111-11-11</span>
+			</div>
+			
+			<div class="header__top__logo">
+				<img src="assets/images/logo.png" alt="">	
+			</div>
+			
+			<div class="header__top__cart">
+				<img src="assets/images/icons/shopping-cart.svg" alt="">	
+				<span>Cart item (0) ($0.00)</span>
+			</div>	
+		</div>
+		<div class="header__nav">
+			<div class="header__nav__items">
+				<ul>
+					<li><a href="">Jewellery</a></li>
+					<li><a href="">Accesorries</a></li>
+					<li><a href="">Collection</a></li>
+					<li><a href="">Category</a></li>
+					<li><a href="">Blogs</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">FAQs</a></li>
+					<li><a href="">About Us</a></li>
+				</ul>
+			</div>	
+			<div class="header__nav__search">
+				<input type="text" placeholder="Search">	
+				<img src="assets/images/icons/search.svg" alt="">	
+			</div>	
+		</div>
+	</header>
+	<img src="assets/images/Slider-2_36901572-f33f-47e0-b086-6fa4800350d0_2048x.png" alt="">	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script>
+		let offset = $('.header__nav').offset().top;
+		//alert(offset + $('.header__nav').innerHeight());
+		$(document).ready(function() {
+			$(document).on('scroll', function() {
+				//alert($(document).scrollTop());
+				if ($(document).scrollTop() > (offset + $('.header__nav').innerHeight())) {
+					$('.header__nav').addClass('menu_static');
+				}else {
+					$('.header__nav').removeClass('menu_static');	
+				}	
+			});	
+		});
+	</script>
+</body>
+</html>
