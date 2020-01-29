@@ -44,17 +44,33 @@ body {
 }
 
 .header__nav {
+	width: 100vw !important;
 	position: absolute;
+	left:0 !important;
+	display: flex;
+	justify-content: center;
+	top: 130px;
+}
+
+.header__nav__main {
 	background: #fff;
-	bottom:-19px;
-	left: 50%;
-	transform: translateX(-50%);
 	border: 1px solid #f9f9f9;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	padding: 4px;
+	max-width: 1200px;
+}
+
+@keyframes showmenu {
+	from {
+		top: -50px;
+	}
+	
+	top {
+		top: 0px;
+	}
 }
 
 .menu_static {
@@ -63,6 +79,13 @@ body {
 	background: #f9f1ef !important;
 	top:0;
 	height: 50px;
+	top:0px;
+	animation-name: showmenu;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	box-shadow: 4px 0 8px gray;
+	
 }
 
 .header__nav__items > ul {

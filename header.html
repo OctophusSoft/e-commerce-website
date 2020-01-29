@@ -23,25 +23,31 @@
 				<span>Cart item (0) ($0.00)</span>
 			</div>	
 		</div>
-		<div class="header__nav">
-			<div class="header__nav__items">
-				<ul>
-					<li><a href="">Jewellery</a></li>
-					<li><a href="">Accesorries</a></li>
-					<li><a href="">Collection</a></li>
-					<li><a href="">Category</a></li>
-					<li><a href="">Blogs</a></li>
-					<li><a href="">Contact</a></li>
-					<li><a href="">FAQs</a></li>
-					<li><a href="">About Us</a></li>
-				</ul>
-			</div>	
-			<div class="header__nav__search">
-				<input type="text" placeholder="Search">	
-				<img src="assets/images/icons/search.svg" alt="">	
+	</header>
+	<div class="header__nav">
+			<div class="header__nav__main">
+				<div class="header__nav__items">
+					<ul>
+						<li><a href="">Jewellery</a></li>
+						<li><a href="">Accesorries</a></li>
+						<li><a href="">Collection</a></li>
+						<li><a href="">Category</a></li>
+						<li><a href="">Blogs</a></li>
+						<li><a href="">Contact</a></li>
+						<li><a href="">FAQs</a></li>
+						<li><a href="">About Us</a></li>
+					</ul>
+				</div>	
+				<div class="header__nav__search">
+					<input type="text" placeholder="Search">	
+					<img src="assets/images/icons/search.svg" alt="">	
+				</div>	
 			</div>	
 		</div>
-	</header>
+	
+	
+	
+	
 	<img src="assets/images/Slider-2_36901572-f33f-47e0-b086-6fa4800350d0_2048x.png" alt="">	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<script>
@@ -52,8 +58,14 @@
 				//alert($(document).scrollTop());
 				if ($(document).scrollTop() > (offset + $('.header__nav').innerHeight())) {
 					$('.header__nav').addClass('menu_static');
+					$('.header__nav__main').css('background', 'none');
+					$('.header__nav__search').css('background', '#fff');
+					$('.header__nav__search').find('input').css('background', '#fff');
 				}else {
-					$('.header__nav').removeClass('menu_static');	
+					$('.header__nav').removeClass('menu_static');
+					$('.header__nav__main').css('background', '#fff');
+					$('.header__nav__search').css('background', '#f9f9f9');
+					$('.header__nav__search').find('input').css('background', '#f9f9f9');
 				}	
 			});	
 		});
