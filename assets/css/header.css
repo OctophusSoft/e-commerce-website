@@ -4,8 +4,14 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
+
+img {
+	max-width: 100%;
+}
+
 body {
 	height: 2000px;
+	overflow-x: hidden;
 }
 
 .header {
@@ -18,7 +24,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding-top:30px;
-	padding-bottom:65px;
+	padding-bottom:50px;
 }
 
 .header__top__number {
@@ -49,7 +55,7 @@ body {
 	left:0 !important;
 	display: flex;
 	justify-content: center;
-	top: 130px;
+	top: 115px;
 }
 
 .header__nav__main {
@@ -126,4 +132,19 @@ body {
 	border: none;
 	padding: 2px;
 	background: #F9F9F9;
+}
+
+
+.bread_crumbs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../images/breadcurmb-img.webp);
+	height: 165px;
+	background-attachment: fixed;
+	color: #3d3b3b;
+}
+
+.bread_crumbs__path {
+	padding-top: 20px;
 }

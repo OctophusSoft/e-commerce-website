@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="assets/css/header.css">
 </head>
 <body>
+<!-- header start -->
 	<header class="header">
 		<div class="header__top">
 			<div class="header__top__number">
@@ -25,25 +26,31 @@
 		</div>
 	</header>
 	<div class="header__nav">
-			<div class="header__nav__main">
-				<div class="header__nav__items">
-					<ul>
-						<li><a href="">Jewellery</a></li>
-						<li><a href="">Accesorries</a></li>
-						<li><a href="">Collection</a></li>
-						<li><a href="">Category</a></li>
-						<li><a href="">Blogs</a></li>
-						<li><a href="">Contact</a></li>
-						<li><a href="">FAQs</a></li>
-						<li><a href="">About Us</a></li>
-					</ul>
-				</div>	
-				<div class="header__nav__search">
-					<input type="text" placeholder="Search">	
-					<img src="assets/images/icons/search.svg" alt="">	
-				</div>	
+		<div class="header__nav__main">
+			<div class="header__nav__items">
+				<ul>
+					<li><a href="">Jewellery</a></li>
+					<li><a href="">Accesorries</a></li>
+					<li><a href="">Collection</a></li>
+					<li><a href="">Category</a></li>
+					<li><a href="">Blogs</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">FAQs</a></li>
+					<li><a href="">About Us</a></li>
+				</ul>
 			</div>	
-		</div>
+			<div class="header__nav__search">
+				<input type="text" placeholder="Search">	
+				<img src="assets/images/icons/search.svg" alt="">	
+			</div>	
+		</div>	
+	</div>
+<!-- header end -->
+	<div class="bread_crumbs">
+		<div class="bread_crumbs__path">
+			Home
+		</div>	
+	</div>
 	
 	
 	
@@ -56,7 +63,7 @@
 		$(document).ready(function() {
 			$(document).on('scroll', function() {
 				//alert($(document).scrollTop());
-				if ($(document).scrollTop() > (offset + $('.header__nav').innerHeight())) {
+				if ($(document).scrollTop() > offset) {
 					$('.header__nav').addClass('menu_static');
 					$('.header__nav__main').css('background', 'none');
 					$('.header__nav__search').css('background', '#fff');
