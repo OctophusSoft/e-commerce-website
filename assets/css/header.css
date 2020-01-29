@@ -1,0 +1,150 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	height: 2000px;
+	overflow-x: hidden;
+}
+
+.header {
+	max-width: 1200px;
+	margin: auto;
+	position: relative;
+}
+
+.header__top {
+	display: flex;
+	justify-content: space-between;
+	padding-top:30px;
+	padding-bottom:50px;
+}
+
+.header__top__number {
+	display: flex;
+	align-items: center;
+}
+
+.header__top__number > img {
+	width: 30px;
+	height: 30px;
+	padding-right: 8px;
+}
+
+.header__top__cart {
+	display: flex;
+	align-items: center;
+}
+
+.header__top__cart > img {
+	width: 30px;
+	height: 30px;
+	padding-right: 8px;
+}
+
+.header__nav {
+	width: 100vw !important;
+	position: absolute;
+	left:0 !important;
+	display: flex;
+	justify-content: center;
+	top: 115px;
+}
+
+.header__nav__main {
+	background: #fff;
+	border: 1px solid #f9f9f9;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 4px;
+	max-width: 1200px;
+}
+
+@keyframes showmenu {
+	from {
+		top: -50px;
+	}
+	
+	top {
+		top: 0px;
+	}
+}
+
+.menu_static {
+	position: fixed !important;
+	width: 100vw !important;
+	background: #f9f1ef !important;
+	top:0;
+	height: 50px;
+	top:0px;
+	animation-name: showmenu;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	box-shadow: 4px 0 8px gray;
+	
+}
+
+.header__nav__items > ul {
+	display: flex;
+}
+
+.header__nav__items > ul > li {
+	list-style: none;
+}
+
+.header__nav__items > ul > li > a {
+	text-decoration: none;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 90px;
+	font-size: 15px;
+}
+
+.header__nav__search {
+	display: flex;
+	align-items: center;
+	background: #F9F9F9;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.header__nav__search > img {
+	width: 18px;
+	height: 18px;
+	margin-left: 3px;
+	cursor: pointer;
+}
+
+.header__nav__search > input {
+	outline: none;
+	border: none;
+	padding: 2px;
+	background: #F9F9F9;
+}
+
+
+.bread_crumbs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../images/breadcurmb-img.webp);
+	height: 165px;
+	background-attachment: fixed;
+	color: #3d3b3b;
+}
+
+.bread_crumbs__path {
+	padding-top: 20px;
+}
