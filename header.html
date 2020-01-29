@@ -51,30 +51,7 @@
 		</div>	
 	</div>
 <!-- header end -->
-	
-	
-	
-	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-	<script>
-		let offset = $('.header__nav').offset().top;
-		//alert(offset + $('.header__nav').innerHeight());
-		$(document).ready(function() {
-			$(document).on('scroll', function() {
-				//alert($(document).scrollTop());
-				if ($(document).scrollTop() > offset) {
-					$('.header__nav').addClass('menu_static');
-					$('.header__nav__main').css('background', 'none');
-					$('.header__nav__search').css('background', '#fff');
-					$('.header__nav__search').find('input').css('background', '#fff');
-				}else {
-					$('.header__nav').removeClass('menu_static');
-					$('.header__nav__main').css('background', '#fff');
-					$('.header__nav__search').css('background', '#f9f9f9');
-					$('.header__nav__search').find('input').css('background', '#f9f9f9');
-				}	
-			});	
-		});
-	</script>
+	<script src="assets/js/header.js"></script>
 </body>
 </html>
