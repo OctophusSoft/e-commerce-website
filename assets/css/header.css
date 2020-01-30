@@ -19,6 +19,7 @@ body {
 	max-width: 1200px;
 	margin: auto;
 	position: relative;
+	z-index: 9999;
 }
 
 .header__top {
@@ -26,6 +27,7 @@ body {
 	justify-content: space-between;
 	padding-top:30px;
 	padding-bottom:50px;
+	z-index: 9999;
 }
 
 .header__top__number {
