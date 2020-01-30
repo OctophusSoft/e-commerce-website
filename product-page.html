@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/product_page.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="assets/js/quantity_script.js"></script>
+    <script src="assets/js/product_tab_script.js"></script>
+</head>
+<body>
+<!-- header start -->
+	<header class="header">
+		<div class="header__top">
+			<div class="header__top__number">
+				<img src="assets/images/icons/whatsapp.svg" alt="">	
+				<span>+375 (29) 111-11-11</span>
+			</div>
+			
+			<div class="header__top__logo">
+				<img src="assets/images/logo.png" alt="">	
+			</div>
+			
+			<div class="header__top__cart">
+				<img src="assets/images/icons/shopping-cart.svg" alt="">	
+				<span>Cart item (0) ($0.00)</span>
+			</div>	
+		</div>
+	</header>
+	<div class="header__nav">
+		<div class="header__nav__main">
+			<div class="header__nav__items">
+				<ul>
+					<li><a href="">Jewellery</a></li>
+					<li><a href="">Accesorries</a></li>
+					<li><a href="">Collection</a></li>
+					<li><a href="">Category</a></li>
+					<li><a href="">Blogs</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">FAQs</a></li>
+					<li><a href="">About Us</a></li>
+				</ul>
+			</div>	
+			<div class="header__nav__search">
+				<input type="text" placeholder="Search">	
+				<img src="assets/images/icons/search.svg" alt="">	
+			</div>	
+		</div>	
+	</div>
+	<div class="bread_crumbs">
+		<div class="bread_crumbs__path">
+			Home
+		</div>	
+    </div>
+
+<!-- Main Content start-->
+    <div class="main_content">
+        <div class="main_content__recommended_products">
+            test
+        </div>
+        <div class="main_content__product_info_container">
+            <div class="main_content__product_payment_info">
+                <div class="main_content__product_photo">
+                    <h2></h2>
+                    <div class="product__photos">
+                        <div class="product__single_photo">
+                            <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
+                        </div>
+                        <div class="product__thumbnail_photos">
+                            <div class="product__thumbnail_photos_container">
+                                <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
+                            </div>
+                            <div class="product__thumbnail_photos_container">
+                                <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
+                            </div>
+                            <div class="product__thumbnail_photos_container">
+                                <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_content__payment">
+                    <h2 class="product__header">Best Dimong Ring Gold</h2>
+                    <div class="product__reviews"> 
+                            <span class="spr-badge" id="spr_badge_2450502582377" data-rating="4.0">
+                                <span class="spr-starrating spr-badge-starrating">
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star-empty"><img src="assets/images/icons/empty_star.svg" alt=""></i>
+                                </span>
+                            </span>
+                            <a href="" class="write_comment">Write Review</a>
+                    </div>
+                    <div class="product__price">
+                        <h3 class="product__current_price">$50.00</h3>
+                        <h3 class="product__previous_price">$50.00</h3>
+                    </div>
+                    <div class="product__brief_info">
+                        <div class="product__material">
+                            Materials: Silver, Stone, Turquoise Gemstone.
+                        </div>
+                        <div class="product__dimensions">
+                            Dimensions: Pendant height: 2.2 Inches; Pendant width: 1.3 Inches
+                        </div>
+                        <div class="product__properties">
+
+                        </div>
+                    </div>
+                    <label>Units</label>
+                    <div class="add_to_cart_panel">
+                        <div class="quantity_panel">
+                            
+                            <div class="dec_button" onclick="quantity_dec()">-</div>
+                            <input name="quantity" id="quantity_counter" value="1" class="quantity" onchange="validate_quantity_number()">
+                            <div class="inc_button" onclick="quantity_inc()">+</div> 
+                        </div>
+                        <div class="buy_button">
+                            <button class="add_to_cart_button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="additional_buttons">
+                        <button class="buy_it_now_button">BUY IT NOW</button>
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+            <div class="main_content__product_info">
+                <div class="product_info__tab">
+                    <button class="product_info__tablinks" onclick="open_product_tab(event, 'description')">description</button>
+                    <button class="product_info__tablinks" onclick="open_product_tab(event, 'reviews')">reviews</button>
+                    <button class="product_info__tablinks" onclick="open_product_tab(event, 'shipping & returns')">shipping & returns</button>
+                </div>
+                <div id="description" class="product_info__tabcontent" style="display: block;">
+                       <p>This fine necklace is handmade of sterling silver wire and blue Turquoise stone.</p> <br>
+
+                        <p>Total measures of this pendant - 2.2 x 1.3 inches (5.5 x 3.3 cm)
+                        Turquoise stone - 1.6 x 1.2 inches (4 x 3 cm).</p>   <br>  
+                        <p>So the tree of life pendant can be worn right away, I've included an suede leather cord until you replace the cord with something better.</p><br>
+                        <p>Durability of materials and quality of work make the product suitable for daily use. Design pendant suit and evening dress, and the dress to the business.</p><br>
+                        <p>Turquoise is one of the oldest protection amulets, and was also known as a symbol of wealth in many ancient cultures. The turquoise is the symbol of friendship. It also brings peace to the home.</p><br>  
+                        <p>This pendant made with good intentions and love!
+                            One of a kind, unusual and beautiful gift.</p><br>
+                        <p>Each necklace is unique and may look slightly different than picture.</p><br>
+                  </div>
+                  
+                  <div id="reviews" class="product_info__tabcontent">
+                    <p>Paris is the capital of France.</p>
+                  </div>
+                  
+                  <div id="shipping & returns" class="product_info__tabcontent">
+                        <b>I gladly accept returns and exchanges</b> <br>
+                        Contact me within: 3 days of delivery <br>
+                        Ship items back within: 7 days of delivery <br> <br>
+                        <b>I don't accept cancellations</b> <br>
+                        But please contact me if you have any problems with your order. <br> <br>
+                        <b>The following items can't be returned or exchanged</b> <br>
+                        Because of the nature of these items, unless they arrive damaged or defective, I can't accept returns for:
+                        <ul>
+                            <li>Custom or personalized orders</li>
+                            <li>Perishable products (like food or flowers)</li>
+                            <li>Digital downloads</li>
+                            <li>Intimate items (for health/hygiene reasons)</li>
+                            <li>Items on sale</li>
+                        </ul>  <br>
+                        <b> Conditions of return</b> <br>
+                        Buyers are responsible for return shipping costs. If the item is not returned in its original condition, the buyer is responsible for any loss in value. <br>
+                
+                  </div>
+            </div>
+        </div>
+    </div>
+
+<!-- footer start-->
+    <footer>
+        <div class="footer_content">
+            <div class="footer_content__main">
+                <div class="footer_content__info__container">
+                    <div class="footer_content__info">
+                    <div class="footer__info__logo">
+                       <a href=""> <img class="feature-row__image lazyautosizes lazyloaded" src="assets/images/Logo_31fd27d5-dab8-41e3-b121-ad2d6637aa48_130x56.png" 
+                        data-src="" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="2.3214285714285716" data-sizes="auto" alt="" sizes="130px"> </a>
+                    </div>
+                    <div class="footer-info-text">
+                        <p> 
+                            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesettins 
+                            Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text 
+                            Ever Since The 1500s.
+                        </p>
+                    </div>
+                </div>                 
+                </div>
+                <div class="footer__navigation__newsletter">
+                    <div class="footer__newsletter">
+                        <h3 class="footer__heading">NEWSLETTER SIGN-UP</h3>
+                        
+                        <form action="">
+                            <div class="footer__input_group">
+                                <input type="email" name="contact[email]" id="Email" class="input-group__field newsletter__input" value="" placeholder="Enter your E-Mail" autocapitalize="off">
+                                <span class="footer__input_group__button">
+                                   <button class="footer__submit_button" type="submit" class="newsletter-submit">
+                                        <span class="footer__button__text">Subscribe</span>
+                                   </button>
+                                </span>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="footer__social_media">
+                        <h3 class="footer__heading">FOLLOW US</h3>
+                        <div class="footer__social_media__icons">
+                          <span class="facebook"><a href="https://vk.com/d_000009"> <i></i> </a></span>
+                          <span class="vk"><a href="https://vk.com/d_000009"> <i></i> </a></span>
+                          <span class="instagram"><a href="https://vk.com/d_000009"> <i></i> </a></span>
+
+                        </div>              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script>
+    let offset = $('.header__nav').offset().top;
+    //alert(offset + $('.header__nav').innerHeight());
+    $(document).ready(function() {
+        $(document).on('scroll', function() {
+            //alert($(document).scrollTop());
+            if ($(document).scrollTop() > offset) {
+                $('.header__nav').addClass('menu_static');
+                $('.header__nav__main').css('background', 'none');
+                $('.header__nav__search').css('background', '#fff');
+                $('.header__nav__search').find('input').css('background', '#fff');
+            }else {
+                $('.header__nav').removeClass('menu_static');
+                $('.header__nav__main').css('background', '#fff');
+                $('.header__nav__search').css('background', '#f9f9f9');
+                $('.header__nav__search').find('input').css('background', '#f9f9f9');
+            }	
+        });	
+    });
+</script>
