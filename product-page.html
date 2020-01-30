@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/product_page.css">
+    <link rel="stylesheet" href="assets/css/catalog.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="assets/js/quantity_script.js"></script>
     <script src="assets/js/product_tab_script.js"></script>
+    <script src="assets/js/catalog.js"></script>
 </head>
 <body>
 <!-- header start -->
@@ -62,7 +65,7 @@
             <aside class="catalog_page__aside">
                 <div class="catalog_page__popup">
                     <div class="catalog_page__popup__head">
-                        <h2>NECKLACE</h2>
+                        <a>New Jeverly</a>
                         <div class="catalog_page__popup__head__arrow">
                             <img src="assets/images/icons/arrow.svg" alt="">	
                         </div>
@@ -78,10 +81,19 @@
                                     <li>Choker Set</li>
                                     <li>Floral Gold</li>
                                     <li>Pendant Set</li>
-                                    <li>Enameled Gold</li>
-                                    <li>Diamond Necklace</li>
-                                    <li>Round Shape</li>
-                                    <li>Gold Necklace</li>
+                                </ul>	
+                            </div>
+                        </div>
+                        <div class="catalog_page__popup__body__item">
+                            <div class="catalog_page__popup__body__item__head">
+                                <p>Ring</p>
+                                <span>+</span>
+                            </div>	
+                            <div class="catalog_page__popup__body__item__body">
+                                <ul>
+                                    <li>Choker Set</li>
+                                    <li>Floral Gold</li>
+                                    <li>Pendant Set</li>
                                 </ul>	
                             </div>
                         </div>
@@ -94,28 +106,6 @@
                                 <ul>
                                     <li>Choker Set</li>
                                     <li>Floral Gold</li>
-                                    <li>Pendant Set</li>
-                                    <li>Enameled Gold</li>
-                                    <li>Diamond Necklace</li>
-                                    <li>Round Shape</li>
-                                    <li>Gold Necklace</li>
-                                </ul>	
-                            </div>
-                        </div>
-                        <div class="catalog_page__popup__body__item">
-                            <div class="catalog_page__popup__body__item__head">
-                                <p>Necklace</p>
-                                <span>+</span>
-                            </div>	
-                            <div class="catalog_page__popup__body__item__body">
-                                <ul>
-                                    <li>Choker Set</li>
-                                    <li>Floral Gold</li>
-                                    <li>Pendant Set</li>
-                                    <li>Enameled Gold</li>
-                                    <li>Diamond Necklace</li>
-                                    <li>Round Shape</li>
-                                    <li>Gold Necklace</li>
                                 </ul>	
                             </div>
                         </div>		
@@ -124,13 +114,85 @@
                 
                 <div class="catalog_page__popup mt">
                     <div class="catalog_page__popup__head">
-                        <h2>FILTER</h2>
+                        <a>SPECIAL COLLECTION</a>
                         <div class="catalog_page__popup__head__arrow">
                             <img src="assets/images/icons/arrow.svg" alt="">	
                         </div>
                     </div>	
                     <div class="catalog_page__popup__body">
-        
+                        <div class="catalog__product_thumbnail">
+                            <div class="catalog__product_thumbnail__photo">
+                                <a href=""><img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt=""></a>
+                            </div>
+                            <div class="catalog__product_thumbnail__info">
+                                <a href="/">Few Neckless Gold</a>
+                                <div class="catalog__product_thumbnail__price">
+                                    <div class="catalog__product_thumbnail__old_price">$42.00</div>
+                                    <div class="catalog__product_thumbnail__discount">%6</div>
+                                    <div class="catalog__product_thumbnail__current_price">$42.00</div>
+                                </div>
+                                <div class="catalog__product_thumbnail__rating">
+                                    <span class="spr-badge" id="spr_badge_2450502582377" data-rating="4.0">
+                                        <span class="spr-starrating spr-badge-starrating">
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star-empty"><img src="assets/images/icons/empty_star.svg" alt=""></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product_thumbnail">
+                            <div class="catalog__product_thumbnail__photo">
+                                <a href=""><img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt=""></a>
+                            </div>
+                            <div class="catalog__product_thumbnail__info">
+                                <a href="/">Few Neckless Gold</a>
+                                <div class="catalog__product_thumbnail__price">
+                                    <div class="catalog__product_thumbnail__old_price">$42.00</div>
+                                    <div class="catalog__product_thumbnail__discount">%6</div>
+                                    <div class="catalog__product_thumbnail__current_price">$42.00</div>
+                                </div>
+                                <div class="catalog__product_thumbnail__rating">
+                                    <span class="spr-badge" id="spr_badge_2450502582377" data-rating="4.0">
+                                        <span class="spr-starrating spr-badge-starrating">
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star-empty"><img src="assets/images/icons/empty_star.svg" alt=""></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product_thumbnail">
+                            <div class="catalog__product_thumbnail__photo">
+                                <a href=""><img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt=""></a>
+                            </div>
+                            <div class="catalog__product_thumbnail__info">
+                                <a href="/">Few Neckless Gold</a>
+                                <div class="catalog__product_thumbnail__price">
+                                    <div class="catalog__product_thumbnail__old_price">$42.00</div>
+                                    <div class="catalog__product_thumbnail__discount">%6</div>
+                                    <div class="catalog__product_thumbnail__current_price">$42.00</div>
+                                </div>
+                                <div class="catalog__product_thumbnail__rating">
+                                    <span class="spr-badge" id="spr_badge_2450502582377" data-rating="4.0">
+                                        <span class="spr-starrating spr-badge-starrating">
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                            <i class="icon-star-empty"><img src="assets/images/icons/empty_star.svg" alt=""></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__link"><a href="">view all products ></a></div>
                     </div>
                 </div>	
             </aside>
@@ -140,7 +202,7 @@
                 <div class="main_content__product_photo">
                     <h2></h2>
                     <div class="product__photos">
-                        <div class="product__single_photo">
+                        <div class="product__single_photo img_hover_zoom" style="" onmousemove="on_mouse_over()">
                             <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
                         </div>
                         <div class="product__thumbnail_photos">
@@ -153,6 +215,9 @@
                             <div class="product__thumbnail_photos_container">
                                 <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
                             </div>
+                        </div>
+                        <div class="product__thumbnail_photos_scroller__container">
+                            
                         </div>
                     </div>
                 </div>
@@ -248,6 +313,86 @@
                 
                   </div>
             </div>
+            <div class="main_content__back_to_catalog_button__container"><a class="main_content__back_to_catalog_button">BACK TO CATALOG</a></div>
+            <div class="main_content__featured_products__container"> 
+                 <h2 class="main_content__featured_products__header">RELATED PRODUCTS</h2>
+                 <img src="assets/images/home.webp" alt="">
+                 <div class="main_content__featured_products">
+                <div class="main_content__featured_products__thumbnail">
+                    <div class="main_content__featured_products__thumbnail__photo">
+                        <a href=""><img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt=""></a>
+                        <div class="product__reviews"> 
+                            <span class="spr-badge" id="spr_badge_2450502582377" data-rating="4.0">
+                                <span class="spr-starrating spr-badge-starrating">
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star-empty"><img src="assets/images/icons/empty_star.svg" alt=""></i>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="main_content__featured_products__thumbnail__info">
+                            <a href="/">Few Neckless Gold</a>
+                            <div class="catalog__product_thumbnail__price">
+                                <div class="catalog__product_thumbnail__old_price">$42.00</div>
+                                <div class="catalog__product_thumbnail__discount">%6</div>
+                                <div class="catalog__product_thumbnail__current_price">$42.00</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="main_content__featured_products__thumbnail">
+                    <div class="main_content__featured_products__thumbnail__photo">
+                        <a href=""><img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt=""></a>
+                        <div class="product__reviews"> 
+                            <span class="spr-badge" id="spr_badge_2450502582377" data-rating="4.0">
+                                <span class="spr-starrating spr-badge-starrating">
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star-empty"><img src="assets/images/icons/empty_star.svg" alt=""></i>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="main_content__featured_products__thumbnail__info">
+                            <a href="/">Few Neckless Gold</a>
+                            <div class="catalog__product_thumbnail__price">
+                                <div class="catalog__product_thumbnail__old_price">$42.00</div>
+                                <div class="catalog__product_thumbnail__discount">%6</div>
+                                <div class="catalog__product_thumbnail__current_price">$42.00</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="main_content__featured_products__thumbnail">
+                    <div class="main_content__featured_products__thumbnail__photo">
+                        <a href=""><img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt=""></a>
+                        <div class="product__reviews"> 
+                            <span class="spr-badge" id="spr_badge_2450502582377" data-rating="4.0">
+                                <span class="spr-starrating spr-badge-starrating">
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star-empty"><img src="assets/images/icons/empty_star.svg" alt=""></i>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="main_content__featured_products__thumbnail__info">
+                            <a href="/">Few Neckless Gold</a>
+                            <div class="catalog__product_thumbnail__price">
+                                <div class="catalog__product_thumbnail__old_price">$42.00</div>
+                                <div class="catalog__product_thumbnail__discount">%6</div>
+                                <div class="catalog__product_thumbnail__current_price">$42.00</div>
+                            </div>
+                    </div>
+                </div>
+                 </div>
+            </div>
+            
         </div>
     </div>
 

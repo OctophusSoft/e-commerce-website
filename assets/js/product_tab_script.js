@@ -1,3 +1,11 @@
+function on_mouse_over() {
+    let x = (event.x - event.target.x) / event.target.offsetWidth *100;
+    let y = (event.y - event.target.y) / event.target.offsetHeight *100;
+    event.target.setAttribute("style", `transform-origin: ${x}% ${y}%;`);
+    console.log();
+    
+}
+
 
 function open_product_tab(evt, cityName) {
     let i, tabcontent, tablinks;
