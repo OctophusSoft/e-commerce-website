@@ -8,6 +8,7 @@ $(document).ready(function() {
 			$(this).parent().find('.catalog_page__popup__body__item__body').slideUp();
 			$(this).parent().find('.catalog_page__popup__body__item__body').addClass('popup_active');
 		}
+
 	});
 	
 	$('.catalog__body__card__main').hover(function() {

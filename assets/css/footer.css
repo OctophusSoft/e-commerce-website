@@ -7,8 +7,8 @@ body {
     letter-spacing: 0.1px;
 }
 
-div {
-    display: block;
+footer {
+    margin-top: 20px;
 }
   
   .footer__submit_button:hover {
