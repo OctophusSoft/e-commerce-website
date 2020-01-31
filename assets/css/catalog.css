@@ -135,9 +135,6 @@
     background-color: rgba(255,255,255,0.5);
 }
 
-.catalog__body__card {
-	width: 270px;
-}
 .catalog__body__card__main {
 	position: relative;
 	cursor: pointer;
@@ -272,5 +269,12 @@
 	margin-top: 30px;
 }
 
+@media (max-width: 768px) {
+    .fa-star {
+		font-size: 11px !important;
+	}
 
-
+	.catalog__body__card__sold_out {
+		font-size: 13px;
+	}
+}

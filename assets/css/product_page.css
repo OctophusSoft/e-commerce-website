@@ -579,15 +579,28 @@ letter-spacing: 0.1px;
 
 @media (max-width: 1200px) {
     .catalog_page__aside {
-        width : 200px !important;
+        width : 220px !important;
     } 
 
     .main_content__recommended_products {
-        width : 15%;
+        width : 20%;
     }
 
     .main_content__product_photo {
         width : 350px;
+    }
+
+    .catalog__product_thumbnail {
+        justify-content: space-between;
+    }
+
+    .catalog_page__popup__body {
+        padding: 10px !important;
+        
+    }
+
+    .catalog__product_thumbnail__photo {
+        width : 60px;
     }
 }
 
