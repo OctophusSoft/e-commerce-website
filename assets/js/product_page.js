@@ -17,6 +17,10 @@ function on_load() {
     scroll_right.setAttribute("style", `left: ${rect.left + main_image.offsetWidth + window.scrollX - scroll_right.offsetWidth/2}px; top: ${rect.top + window.scrollY + images[0].offsetHeight/2 - scroll_right.offsetHeight/2}px;`);
 }
 
+window.onresize = function(event) {
+    on_load();
+};
+
 function on_mouse_over() {
     let x = (event.x - event.target.x) / event.target.offsetWidth *100;
     let y = (event.y - event.target.y) / event.target.offsetHeight *100;

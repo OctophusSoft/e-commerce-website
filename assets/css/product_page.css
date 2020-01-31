@@ -519,6 +519,7 @@ letter-spacing: 0.1px;
     border: 1px solid #000;
     padding: 8px 18px;
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .write_review_button__container > button:hover {
@@ -560,4 +561,88 @@ letter-spacing: 0.1px;
 
 .write_review__container > p {
     margin: 12px 0;
+}
+
+.submit_review_button {
+    text-align: right;
+}
+
+.submit_review_button > button {
+    cursor: pointer;
+    margin: 15px 0 0 0;
+    font-weight: 500;
+    padding: 8px 15px;
+    background-color: #151515;
+    color: #fff;
+    border: 1px solid #151515;
+}
+
+@media (max-width: 1200px) {
+    .catalog_page__aside {
+        width : 200px !important;
+    } 
+
+    .main_content__recommended_products {
+        width : 15%;
+    }
+
+    .main_content__product_photo {
+        width : 350px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main_content__recommended_products {
+        display: none;
+    }
+
+    .main_content__product_info_container {
+        width : 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main_content__product_payment_info {
+        flex-direction: column;
+    }
+
+    .main_content__product_photo {
+        width : 100%;
+    }
+
+    .product__header {
+        text-align: center;
+    }
+
+    .hide_md {
+        display: none;
+    }
+
+    .product__reviews {
+        margin-top: 35px;
+    }
+}
+
+@media (min-width: 768px) {
+    .show_md {
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .product_info__tab {
+        flex-direction: column;
+    }
+
+    .catalog__product_thumbnail__old_price {
+        font-size: 12px;
+    }
+
+    .catalog__product_thumbnail__discount {
+        font-size : 10px;
+    }
+
+    .catalog__product_thumbnail__current_price {
+        font-size: 13px;
+    }
 }
