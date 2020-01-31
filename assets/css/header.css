@@ -59,6 +59,7 @@ body {
 	display: flex;
 	justify-content: center;
 	top: 115px;
+	z-index: 9999;
 }
 
 .header__nav__main {
