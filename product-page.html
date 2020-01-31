@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="assets/css/catalog.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="assets/js/quantity_script.js"></script>
-    <script src="assets/js/product_tab_script.js"></script>
+    <script src="assets/js/product_page.js"></script>
     <script src="assets/js/catalog.js"></script>
 </head>
-<body>
+
+<body onload="on_load()">
 <!-- header start -->
 	<header class="header">
 		<div class="header__top">
@@ -205,19 +205,29 @@
                         <div class="product__single_photo img_hover_zoom" style="" onmousemove="on_mouse_over()">
                             <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
                         </div>
-                        <div class="product__thumbnail_photos">
-                            <div class="product__thumbnail_photos_container">
-                                <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
-                            </div>
-                            <div class="product__thumbnail_photos_container">
-                                <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
-                            </div>
-                            <div class="product__thumbnail_photos_container">
-                                <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
+                        <div class="product__thumbnail_photos__outer">
+                            <div class="product__thumbnail_photos" id="product__thumbnail_photos" style="">
+                                <div class="product__thumbnail_photos_container" style="margin-right: 30px; width : 120px;" onclick="swap_photo()">
+                                    <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
+                                </div>
+                                <div class="product__thumbnail_photos_container" style="margin-right: 30px; width : 120px;" onclick="swap_photo()">
+                                    <img src="assets/images/10_0021c09d-51c8-4230-a2f4-b00b2a40d0fe_1024x1024@2x.png" alt="">
+                                </div>
+                                <div class="product__thumbnail_photos_container" style="margin-right: 30px; width : 120px;" onclick="swap_photo()">
+                                    <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
+                                </div>   
+                                <div class="product__thumbnail_photos_container" style="margin-right: 30px; width : 120px;" onclick="swap_photo()">
+                                    <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
+                                </div>     
+                                <div class="product__thumbnail_photos_container" style="margin-right: 30px; width : 120px;" onclick="swap_photo()">
+                                    <img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt="">
+                                </div>                            
                             </div>
                         </div>
-                        <div class="product__thumbnail_photos_scroller__container">
-                            
+                        
+                        <div class="product__thumbnail_photos_scroller__container" photo_amount="5" scroll_position="4">
+                            <div class="product__thumbnail_photos_scroller scroll_left" onclick="swipe_left()" style=""><</div>
+                            <div class="product__thumbnail_photos_scroller scroll_right" onclick="swipe_right()" style="">></div>
                         </div>
                     </div>
                 </div>
@@ -265,14 +275,11 @@
                     <div class="additional_buttons">
                         <button class="buy_it_now_button">BUY IT NOW</button>
                     </div>
-                    
-                    
-
                 </div>
             </div>
             <div class="main_content__product_info">
                 <div class="product_info__tab">
-                    <button class="product_info__tablinks" onclick="open_product_tab(event, 'description')">description</button>
+                    <button class="product_info__tablinks active" onclick="open_product_tab(event, 'description')">description</button>
                     <button class="product_info__tablinks" onclick="open_product_tab(event, 'reviews')">reviews</button>
                     <button class="product_info__tablinks" onclick="open_product_tab(event, 'shipping & returns')">shipping & returns</button>
                 </div>
@@ -290,7 +297,68 @@
                   </div>
                   
                   <div id="reviews" class="product_info__tabcontent">
-                    <p>Paris is the capital of France.</p>
+                    <div class="product__reviews__head">
+                        <div class="product__reviews__total_rating">
+                            <div class="catalog__product_thumbnail__rating">
+                                <span class="spr-badge" id="spr_badge_2450502582377" data-rating="4.0">
+                                    <span class="spr-starrating spr-badge-starrating">
+                                        <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                        <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                        <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                        <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                        <i class="icon-star-empty"><img src="assets/images/icons/empty_star.svg" alt=""></i>
+                                    </span>
+                                </span>
+                            </div>
+                            <span>based on <span>1</span> review</span>
+                        </div>
+                        <div class="write_review_button__container">
+                            <button onclick="show_review_write_panel()">WRITE A REVIEW</button>
+                        </div>
+                    </div>
+                    <div class="product__reviews__body">
+                        <div class="write_review__container" style="display: none;">
+                            <p>Write Review</p>
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter your name">
+                            <label>Email</label>
+                            <input type="email" placeholder="example@example.com">
+                            <label for="">Rating</label>
+                            <div class="catalog__product_thumbnail__rating">
+                                <span class="" id="" data-rating="0.0">
+                                    <span class="">
+                                        <i class="icon-star-empty" value="0" id="review_star_1"><img onclick="select_rating()" onmouseover="highlight_rating_stars()" onmouseout="remove_highlight()" src="assets/images/icons/empty_star.svg" alt=""></i>
+                                        <i class="icon-star-empty" value="0" id="review_star_2"><img onclick="select_rating()" onmouseover="highlight_rating_stars()" onmouseout="remove_highlight()" src="assets/images/icons/empty_star.svg" alt=""></i>
+                                        <i class="icon-star-empty" value="0" id="review_star_3"><img onclick="select_rating()" onmouseover="highlight_rating_stars()" onmouseout="remove_highlight()" src="assets/images/icons/empty_star.svg" alt=""></i>
+                                        <i class="icon-star-empty" value="0" id="review_star_4"><img onclick="select_rating()" onmouseover="highlight_rating_stars()" onmouseout="remove_highlight()" src="assets/images/icons/empty_star.svg" alt=""></i>
+                                        <i class="icon-star-empty" value="0" id="review_star_5"><img onclick="select_rating()" onmouseover="highlight_rating_stars()" onmouseout="remove_highlight()" src="assets/images/icons/empty_star.svg" alt=""></i>
+                                    </span>
+                                </span>
+                            </div>
+                            <label for="">Review Title</label>
+                            <input type="text" placeholder="Give your review a title">
+                            <label>Body of Review (1500)</label>
+                            <textarea placeholder="Write your comments here" rows="10"></textarea>
+
+                        </div>
+                        <div class="product__reviews__container">
+                        <div class="catalog__product_thumbnail__rating">
+                            <span class="" data-rating="0.0">
+                                <span class="">
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star"><img src="assets/images/icons/star.svg" alt=""></i>
+                                    <i class="icon-star-empty"><img src="assets/images/icons/empty_star.svg" alt=""></i>
+                                </span>
+                            </span>
+                        </div>
+                            <h4 class="review__name">Test</h4>
+                            <p>Test on 26.01.2020</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Non aspernatur distinctio libero officiis, et magnam maxime earum expedita sequi officia facere voluptatem eaque modi incidunt laborum! Alias dolorem amet saepe.</p>
+                        </div>
+                    </div>
                   </div>
                   
                   <div id="shipping & returns" class="product_info__tabcontent">
