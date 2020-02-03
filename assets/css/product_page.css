@@ -658,4 +658,30 @@ letter-spacing: 0.1px;
     .catalog__product_thumbnail__current_price {
         font-size: 13px;
     }
+
+    .product__thumbnail_photos__outer, .product__thumbnail_photos {
+        height: auto;
+    }
 }
+
+@media (max-width: 405px) {
+
+    .add_to_cart_panel {
+        flex-direction: column;
+        margin-bottom: 0 !important;
+    }
+
+    .add_to_cart_button, .write_review_button__container {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .buy_it_now_button, .write_review_button__container > button{
+        width: 100%;
+    }
+
+    .product__reviews__head, .catalog__body__card__info__price {
+        flex-direction: column;
+    }
+}
+

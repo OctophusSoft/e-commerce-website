@@ -6,7 +6,10 @@ function on_load() {
     let rect = main_image.getBoundingClientRect();
 
     thumbnail_photo_width = (main_image.offsetWidth-(margin_photo_value*3))/4;
+    
     let images = document.getElementsByClassName("product__thumbnail_photos_container");
+    main_image.setAttribute("style", `height : ${images[0].offsetHeight}px;`);
+    main_image.children[0].setAttribute("style", `height : ${images[0].offsetHeight}px; width : ${10000}px;`);
     for(let i = 0; i < images.length; i++) {
         images[i].setAttribute("style", `margin-right: ${margin_photo_value}px; width : ${thumbnail_photo_width}px;`);
     }
