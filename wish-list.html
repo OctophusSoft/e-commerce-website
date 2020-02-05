@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/wish-list.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="assets/js/wish-list.js"></script>
+</head>
+
+<body onload="on_load()">
+<!-- header start -->
+	<header class="header">
+		<div class="header__top">
+			<div class="header__top__number">
+				<img src="assets/images/icons/whatsapp.svg" alt="">	
+				<span>+375 (29) 111-11-11</span>
+			</div>
+			
+			<div class="header__top__logo">
+				<img src="assets/images/logo.png" alt="">	
+			</div>
+			
+			<div class="header__top__cart">
+				<img src="assets/images/icons/shopping-cart.svg" alt="">	
+				<span>Cart item (0) ($0.00)</span>
+			</div>	
+		</div>
+	</header>
+	<div class="header__nav">
+		<div class="header__nav__main">
+			<div class="header__nav__items">
+				<ul>
+					<li><a href="">Jewellery</a></li>
+					<li><a href="">Accesorries</a></li>
+					<li><a href="">Collection</a></li>
+					<li><a href="">Category</a></li>
+					<li><a href="">Blogs</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">FAQs</a></li>
+					<li><a href="">About Us</a></li>
+				</ul>
+			</div>	
+			<div class="header__nav__search">
+				<input type="text" placeholder="Search">	
+				<img src="assets/images/icons/search.svg" alt="">	
+			</div>	
+		</div>	
+	</div>
+	<div class="bread_crumbs">
+		<div class="bread_crumbs__path">
+			Home
+		</div>	
+    </div>
+
+    <div class="wish_list__container">
+        <div class="wish_list__empty_message" style="">
+            Your wishlist is currently empty!
+        </div>
+        <table class="wish_list__table" style="">
+            <tbody>
+            <tr>
+                <th>delete</th>
+                <th>image</th>
+                <th>product name</th>
+                <th>unit price</th>
+                <th>action</th>
+            </tr>
+            <tr style="">
+                <td><button class="wish_list__remove_button"><img src="assets/images/icons/close.svg" alt="" onclick="remove_button_click()"></button></td>
+                <td><a href=""><img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt=""></a></td>
+                <td><a class="wish_list__product_name">Good American Diamond</a></td>
+                <td><p class="wish_list__product_price">$30.00</p></td>
+                <td><button class="wish_list__view_product">view product</button></td>
+            </tr>
+            <tr style="">
+                <td><button class="wish_list__remove_button"><img src="assets/images/icons/close.svg" alt="" onclick="remove_button_click()"></button></td>
+                <td><a href=""><img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt=""></a></td>
+                <td><a class="wish_list__product_name">Good American Diamond</a></td>
+                <td><p class="wish_list__product_price">$30.00</p></td>
+                <td><button class="wish_list__view_product">view product</button></td>
+            </tr>
+            <tr style="">
+                <td><button class="wish_list__remove_button"><img src="assets/images/icons/close.svg" alt="" onclick="remove_button_click()"></button></td>
+                <td><a href=""><img src="assets/images/19_f1ac3b24-a757-4201-b8b6-73fbf29a0e72_1024x1024@2x.png" alt=""></a></td>
+                <td><a class="wish_list__product_name">Good American Diamond</a></td>
+                <td><p class="wish_list__product_price">$30.00</p></td>
+                <td><button class="wish_list__view_product">view product</button></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <!-- footer start-->
+    <footer>
+        <div class="footer_content">
+            <div class="footer_content__main">
+                <div class="footer_content__info__container">
+                    <div class="footer_content__info">
+                    <div class="footer__info__logo">
+                       <a href=""> <img class="feature-row__image lazyautosizes lazyloaded" src="assets/images/Logo_31fd27d5-dab8-41e3-b121-ad2d6637aa48_130x56.png" 
+                        data-src="" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="2.3214285714285716" data-sizes="auto" alt="" sizes="130px"> </a>
+                    </div>
+                    <div class="footer-info-text">
+                        <p> 
+                            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesettins 
+                            Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text 
+                            Ever Since The 1500s.
+                        </p>
+                    </div>
+                </div>                 
+                </div>
+                <div class="footer__navigation__newsletter">
+                    <div class="footer__newsletter">
+                        <h3 class="footer__heading">NEWSLETTER SIGN-UP</h3>
+                        
+                        <form action="">
+                            <div class="footer__input_group">
+                                <input type="email" name="contact[email]" id="Email" class="input-group__field newsletter__input" value="" placeholder="Enter your E-Mail" autocapitalize="off">
+                                <span class="footer__input_group__button">
+                                   <button class="footer__submit_button" type="submit" class="newsletter-submit">
+                                        <span class="footer__button__text">Subscribe</span>
+                                   </button>
+                                </span>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="footer__social_media">
+                        <h3 class="footer__heading">FOLLOW US</h3>
+                        <div class="footer__social_media__icons">
+                          <span class="facebook"><a href="https://vk.com/d_000009"> <i></i> </a></span>
+                          <span class="vk"><a href="https://vk.com/d_000009"> <i></i> </a></span>
+                          <span class="instagram"><a href="https://vk.com/d_000009"> <i></i> </a></span>
+
+                        </div>              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
