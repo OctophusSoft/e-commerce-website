@@ -92,3 +92,23 @@
     color : black;
     background-color:#fbddd6;
 }
+
+@media (max-width: 1200px) {
+    .contact__form {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact_form__info {
+        flex-direction: column;
+    }
+
+    .contact_form__info > input {
+        width: 100% !important;
+    }
+
+    .contact_form__header { 
+        font-size: 22px;
+    }
+}
